@@ -18,7 +18,6 @@ ControlDesignRetrieveUpdateDestroyAPIView, ActionObjectiveRetrieveUpdateDestroyA
 ControlOperationRetrieveUpdateDestroyAPIView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('organization/', OrganizationListCreateAPIView.as_view()),
     path('organization/<int:pk>/', OrganizationRetrieveUpdateDestroyAPIView.as_view()),
     path('period/', PeriodListCreateAPIView.as_view()),

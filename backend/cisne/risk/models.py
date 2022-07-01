@@ -20,6 +20,7 @@ class Organization(models.Model):
         Period.objects.create(order=1, organization=self, created_by=self.created_by)
 
 class Period(models.Model):
+    id = models.AutoField(primary_key=True)
     order = models.IntegerField()
     starts_at = models.DateTimeField()
     ends_at = models.DateTimeField()
@@ -139,7 +140,7 @@ class Control(models.Model):
     event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='eventcontrol')
     active = models.BooleanField(default=True)
 
-class Response(models.Model):
+class RiskResponse(models.Model):
     id = models.AutoField(primary_key=True)
     description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)

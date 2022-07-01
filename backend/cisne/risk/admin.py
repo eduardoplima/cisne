@@ -3,7 +3,7 @@ from django.contrib import admin
 # Register your models here.
 from .models import MacroProcess, Process, Event, EventCategory,\
 EventNature, EventCause, EventConsequence, Control, ActionObjective,\
-ActionPlan, ActionType, EventCalculator, ControlDesign, ControlOperation, Response, UserRole\
+ActionPlan, ActionType, EventCalculator, ControlDesign, ControlOperation, RiskResponse, UserRole\
 , Organization, Period
 
 admin.site.register(Organization)
@@ -23,4 +23,4 @@ admin.site.register(ActionType)
 admin.site.register(EventCalculator)
 admin.site.register(ControlDesign)
 admin.site.register(ControlOperation)
-admin.site.register(Response)
+admin.site.register(RiskResponse)

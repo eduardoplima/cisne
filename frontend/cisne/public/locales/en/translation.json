@@ -1,0 +1,7 @@
+{
+    "title": "Cisne - A risk management system",
+    "authentication": {
+        "username": "username",
+        "password": "password"
+    }
+}

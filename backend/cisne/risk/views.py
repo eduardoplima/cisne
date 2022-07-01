@@ -9,8 +9,7 @@ from .serializers import OrganizationSerializer, PeriodSerializer, UserRoleSeria
 
 from .models import Organization, Period, UserRole, MacroProcess, Process, Event, EventCategory, EventNature, \
     EventCause, EventConsequence, Control, ActionObjective, ActionPlan, ActionType, EventCalculator, \
-    ControlDesign, ControlOperation, Response
-
+    ControlDesign, ControlOperation, RiskResponse
 
 # Create your views here.
 
@@ -185,12 +184,12 @@ class ControlOperationRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView)
     permission_classes = (IsAuthenticated,)
 
 class ResponseListCreateAPIView(ListCreateAPIView):
-    queryset = Response.objects.all()
+    queryset = RiskResponse.objects.all()
     serializer_class = ResponseSerializer
     permission_classes = (IsAuthenticated,)
 
 class ResponseRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
-    queryset = Response.objects.all()
+    queryset = RiskResponse.objects.all()
     serializer_class = ResponseSerializer
     permission_classes = (IsAuthenticated,)
 

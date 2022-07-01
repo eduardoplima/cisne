@@ -1,7 +1,7 @@
 from rest_framework.serializers import ModelSerializer
 from .models import Organization, Period, UserRole, MacroProcess,\
     Process, Event, EventCause, \
-        Control, Response, EventConsequence, EventNature, ControlOperation,\
+        Control, RiskResponse, EventConsequence, EventNature, ControlOperation,\
             ControlDesign, EventCategory, ActionObjective, ActionPlan, ActionType,\
                 EventCalculator
 
@@ -67,7 +67,7 @@ class ControlSerializer(ModelSerializer):
 
 class ResponseSerializer(ModelSerializer):
     class Meta:
-        model = Response
+        model = RiskResponse
         fields = '__all__'
 
 class ControlOperationSerializer(ModelSerializer):
